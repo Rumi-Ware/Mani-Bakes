@@ -1,9 +1,9 @@
 // ====== EDIT THESE ======
-const WHATSAPP = "923001234567";   // country code + number, no + or spaces
-const PHONE = "+92 300 1234567";   // number shown for calls
-const EASYPAISA = "0300 1234567";  // Easypaisa account number
-const JAZZCASH = "0300 1234567";   // JazzCash account number
-const ACCOUNT_NAME = "Mani Foods"; // account title
+const WHATSAPP = "+92 333 1902030";   // country code + number, no + or spaces
+const PHONE = "+92 333 1902030";   // number shown for calls
+const EASYPAISA = "+92 333 1902030";  // Easypaisa account number
+const JAZZCASH = "+92 333 1902030";   // JazzCash account number
+const ACCOUNT_NAME = "Mani Bakes"; // account title
 // ========================
 const MENU = [
  {c:"Cakes",e:"🎂",n:"Chocolate Fudge Cake",d:"Rich chocolate sponge, ganache, per pound",p:1800},
