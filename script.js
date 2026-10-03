@@ -35,7 +35,7 @@ $("#tabs").addEventListener("click",e=>{const b=e.target.closest("[data-c]");if(
 $("#menuGrid").addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(!b)return;const q=document.querySelector(`[data-q="${b.dataset.add}"]`);q.value=+q.value+1;toast(MENU[b.dataset.add].n+" added to order")});
 // links
 document.querySelectorAll("[data-call]").forEach(a=>a.href="tel:+"+WHATSAPP);
-document.querySelectorAll("[data-wa]").forEach(a=>a.href=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Assalam o Alaikum, I would like to order from Mani Foods.")}`);
+document.querySelectorAll("[data-wa]").forEach(a=>a.href=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Assalam o Alaikum, I would like to order from Mani Bakes.")}`);
 $("#phoneTxt").textContent=PHONE;$("#yr").textContent=new Date().getFullYear();
 // form
 const f=$("#orderForm");
