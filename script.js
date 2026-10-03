@@ -54,7 +54,10 @@ f.addEventListener("submit",e=>{
   if(f.del.value==="Home delivery"&&!f.addr.value.trim()){err.textContent="Please enter your delivery address.";return}
   const total=lines.reduce((s,l)=>s+l.m.p*l.q,0);
   const msg=["*New order - Mani Bakes*",`Name: ${f.name.value.trim()}`,`Phone: ${f.phone.value.trim()}`,"",...lines.map(l=>`- ${l.q} x ${l.m.n} = Rs ${l.m.p*l.q}`),`Estimated total: Rs ${total} (excluding delivery)`,"",f.msg.value.trim()&&`Cake message/design: ${f.msg.value.trim()}`,`Needed on: ${f.date.value}`,`${f.del.value}${f.del.value==="Home delivery"?": "+f.addr.value.trim():""}`,`Payment: ${f.pay.value}`,f.notes.value.trim()&&`Notes: ${f.notes.value.trim()}`].filter(x=>x!==""&&x!==false&&x!==undefined).join("\n");
-  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank");
-  toast("Opening WhatsApp...");
+  const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+toast("Opening WhatsApp...");
+// Try a new tab first; if the browser blocks it, open in the same tab
+const w = window.open(url, "_blank");
+if (!w) window.location.href = url;
 });
 renderTabs();renderMenu();
