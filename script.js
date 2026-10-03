@@ -1,8 +1,8 @@
 // ====== EDIT THESE ======
-const WHATSAPP = "+92 333 1902030";   // country code + number, no + or spaces
-const PHONE = "+92 333 1902030";   // number shown for calls
-const EASYPAISA = "+92 333 1902030";  // Easypaisa account number
-const JAZZCASH = "+92 333 1902030";   // JazzCash account number
+const WHATSAPP = "923331902030";   // country code + number, no + or spaces
+const PHONE = "+923331902030";   // number shown for calls
+const EASYPAISA = "+923331902030";  // Easypaisa account number
+const JAZZCASH = "+923331902030";   // JazzCash account number
 const ACCOUNT_NAME = "Mani Bakes"; // account title
 // ========================
 const MENU = [
@@ -53,7 +53,7 @@ f.addEventListener("submit",e=>{
   if(!lines.length){err.textContent="Please choose at least one item, using Add on the menu or the quantities above.";return}
   if(f.del.value==="Home delivery"&&!f.addr.value.trim()){err.textContent="Please enter your delivery address.";return}
   const total=lines.reduce((s,l)=>s+l.m.p*l.q,0);
-  const msg=["*New order - Mani Foods*",`Name: ${f.name.value.trim()}`,`Phone: ${f.phone.value.trim()}`,"",...lines.map(l=>`- ${l.q} x ${l.m.n} = Rs ${l.m.p*l.q}`),`Estimated total: Rs ${total} (excluding delivery)`,"",f.msg.value.trim()&&`Cake message/design: ${f.msg.value.trim()}`,`Needed on: ${f.date.value}`,`${f.del.value}${f.del.value==="Home delivery"?": "+f.addr.value.trim():""}`,`Payment: ${f.pay.value}`,f.notes.value.trim()&&`Notes: ${f.notes.value.trim()}`].filter(x=>x!==""&&x!==false&&x!==undefined).join("\n");
+  const msg=["*New order - Mani Bakes*",`Name: ${f.name.value.trim()}`,`Phone: ${f.phone.value.trim()}`,"",...lines.map(l=>`- ${l.q} x ${l.m.n} = Rs ${l.m.p*l.q}`),`Estimated total: Rs ${total} (excluding delivery)`,"",f.msg.value.trim()&&`Cake message/design: ${f.msg.value.trim()}`,`Needed on: ${f.date.value}`,`${f.del.value}${f.del.value==="Home delivery"?": "+f.addr.value.trim():""}`,`Payment: ${f.pay.value}`,f.notes.value.trim()&&`Notes: ${f.notes.value.trim()}`].filter(x=>x!==""&&x!==false&&x!==undefined).join("\n");
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank");
   toast("Opening WhatsApp...");
 });
