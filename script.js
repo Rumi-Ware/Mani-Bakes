@@ -1,8 +1,8 @@
 // ====== EDIT THESE ======
-const WHATSAPP = "923331902030";   // country code + number, no + or spaces
-const PHONE = "+923331902030";   // number shown for calls
-const EASYPAISA = "+923331902030";  // Easypaisa account number
-const JAZZCASH = "+923331902030";   // JazzCash account number
+const WHATSAPP = "923335767687";   // country code + number, no + or spaces
+const PHONE = "+92 333 5767687";   // number shown for calls
+const EASYPAISA = "+92 333 5767687";  // Easypaisa account number
+const JAZZCASH = "+92 333 5767687";   // JazzCash account number
 const ACCOUNT_NAME = "Mani Bakes"; // account title
 // ========================
 const MENU = [
